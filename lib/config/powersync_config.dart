@@ -1,10 +1,18 @@
+import 'auth_config.dart';
+
 /// PowerSync configuration for the Todo app
 class PowerSyncConfig {
-  // PowerSync endpoint - replace with your actual PowerSync instance URL
-  static const String endpoint = 'wss://your-powersync-instance.powersync.co';
+  // PowerSync endpoint - uses AuthConfig for centralized configuration
+  static String get endpoint => AuthConfig.endpoint;
   
-  // PowerSync token - replace with your actual token
-  static const String token = 'your-powersync-token';
+  // PowerSync token - uses AuthConfig for centralized configuration
+  static String get token => AuthConfig.token;
+  
+  // Development token (for testing only)
+  static String get devToken => AuthConfig.devToken;
+  
+  // Production token (for production use)
+  static String get prodToken => AuthConfig.prodToken;
   
   // Database name
   static const String databaseName = 'todo_powersync_db';
