@@ -21,7 +21,7 @@ class AuthConfig {
   static const String devUserId = 'dev-user-123';
   
   /// Database name (same as in your PowerSync project)
-  static const String databaseName = 'powersync_todo_db';
+  static const String databaseName = 'powersync-todo.db';
   
   // ========================================
   // 🚀 QUICK START INSTRUCTIONS

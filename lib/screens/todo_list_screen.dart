@@ -20,14 +20,14 @@ class _TodoListScreenState extends State<TodoListScreen> {
         title: const Text('PowerSync Todo'),
         actions: [
           // Sync status indicator
-          Consumer<TodoProvider>(
-            builder: (context, todoProvider, child) {
-              return Padding(
-                padding: const EdgeInsets.only(right: 16.0),
-                child: _buildSyncStatusIndicator(todoProvider.isConnected),
-              );
-            },
-          ),
+          // Consumer<TodoProvider>(
+          //   builder: (context, todoProvider, child) {
+          //     return Padding(
+          //       padding: const EdgeInsets.only(right: 16.0),
+          //       child: _buildSyncStatusIndicator(todoProvider.isConnected),
+          //     );
+          //   },
+          // ),
           Consumer<TodoProvider>(
             builder: (context, todoProvider, child) {
               return PopupMenuButton<String>(
@@ -76,7 +76,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
               },
             ),
           ),
-          
+          /*
           // Stats
           Consumer<TodoProvider>(
             builder: (context, todoProvider, child) {
@@ -107,7 +107,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
           ),
           
           const SizedBox(height: 16),
-          
+          */
           // Todo list
           Expanded(
             child: Consumer<TodoProvider>(

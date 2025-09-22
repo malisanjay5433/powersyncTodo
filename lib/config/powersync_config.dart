@@ -15,7 +15,7 @@ class PowerSyncConfig {
   static String get prodToken => AuthConfig.prodToken;
   
   // Database name
-  static const String databaseName = 'todo_powersync_db';
+  static const String databaseName = 'powersync-todo.db';
   
   /// Get PowerSync schema for todos (simplified for v1.4.2)
   static String get schema => '''

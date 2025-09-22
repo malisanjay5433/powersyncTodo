@@ -20,30 +20,30 @@ const schema = Schema([
   ])
 ]);
 
-/// Alternative schema with lists (if you want to extend to multiple todo lists)
-const schemaWithLists = Schema([
-  Table('todos', [
-    Column.text('list_id'),
-    Column.text('title'),
-    Column.text('description'),
-    Column.integer('completed'),
-    Column.text('created_at'),
-    Column.text('updated_at'),
-    Column.text('created_by'),
-    Column.text('completed_by'),
-  ], indexes: [
-    // Index to allow efficient lookup within a list
-    Index('todos_list_id', [IndexedColumn('list_id')]),
-    // Index to allow efficient lookup by completion status
-    Index('todos_completed', [IndexedColumn('completed')])
-  ]),
-  Table('lists', [
-    Column.text('name'),
-    Column.text('created_at'),
-    Column.text('updated_at'),
-    Column.text('owner_id')
-  ], indexes: [
-    // Index to allow efficient lookup by owner
-    Index('lists_owner_id', [IndexedColumn('owner_id')])
-  ])
-]);
+// /// Alternative schema with lists (if you want to extend to multiple todo lists)
+// const schemaWithLists = Schema([
+//   Table('todos', [
+//     Column.text('list_id'),
+//     Column.text('title'),
+//     Column.text('description'),
+//     Column.integer('completed'),
+//     Column.text('created_at'),
+//     Column.text('updated_at'),
+//     Column.text('created_by'),
+//     Column.text('completed_by'),
+//   ], indexes: [
+//     // Index to allow efficient lookup within a list
+//     Index('todos_list_id', [IndexedColumn('list_id')]),
+//     // Index to allow efficient lookup by completion status
+//     Index('todos_completed', [IndexedColumn('completed')])
+//   ]),
+//   Table('lists', [
+//     Column.text('name'),
+//     Column.text('created_at'),
+//     Column.text('updated_at'),
+//     Column.text('owner_id')
+//   ], indexes: [
+//     // Index to allow efficient lookup by owner
+//     Index('lists_owner_id', [IndexedColumn('owner_id')])
+//   ])
+// ]);
